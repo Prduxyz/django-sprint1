@@ -60,9 +60,9 @@ def category_posts(request, category_slug):
     return render(request, 'blog/category.html', context)
 
 
-def post_detail(request, id):
+def post_detail(request, post_id):
     """Страница отдельного поста."""
     if id not in posts_by_id:
         raise Http404('Пост не найден')
-    context = {'post': posts_by_id[id]}
+    context = {'post': posts_by_id[post_id]}
     return render(request, 'blog/detail.html', context)
