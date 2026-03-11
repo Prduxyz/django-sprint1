@@ -1,20 +1,11 @@
 {% extends "base.html" %}
 
 {% block title %}
-Публикации в категории {{ category_slug }}
+  Публикации в категории {{ category_slug }}
 {% endblock %}
 
 {% block content %}
 
-<h1>Публикации в категории {{ category_slug }}</h1>
-
-<article class="mb-5">
-  <ul>
-    <li>Место: {{ post.location }}</li>
-    <li>Дата: {{ post.date }}</li>
-    <li>Категория: {{ post.category }}</li>
-  </ul>
-  <p>{{ post.text }}</p>
-</article>
+  <h1>Публикации в категории {{ category_slug }}</h1>
 
 {% endblock %}
