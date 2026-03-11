@@ -50,7 +50,7 @@ posts_by_id = {post['id']: post for post in posts}
 
 def index(request):
     """Главная страница блога. Показывает все посты."""
-    context = {'posts': posts[::-1]}
+    context = {'posts': reversed(posts)}
     return render(request, 'blog/index.html', context)
 
 
